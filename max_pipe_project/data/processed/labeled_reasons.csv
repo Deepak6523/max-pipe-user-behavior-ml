@@ -1,5 +1,94 @@
 text,label
 Sorry I overslept,0
-Got delayed in client meeting,1
-Wasn't in the mood,0
-Power cut at my place,1
+Wasn’t in the mood,0
+Just forgot about it,0
+Not feeling motivated,0
+Too tired to focus,0
+Wanted to relax,0
+Felt lazy today,0
+Overslept again,0
+Forgot the deadline,0
+Watching a show late,0
+Lost track of time,0
+Went out with friends,0
+Didn't hear the alarm,0
+Phone battery died,0
+Got distracted,0
+Played video games all night,0
+Chose to skip it,0
+Not interested in the task,0
+Had a long night,0
+Tried but gave up,0
+Slept through the alarm,0
+Got carried away scrolling,0
+Too cold to get up,0
+Not feeling creative,0
+Was watching cricket,0
+Feeling lazy this week,0
+Didn’t feel like moving,0
+Felt bored,0
+Wanted more sleep,0
+Rainy mood kept me in,0
+Had a family emergency,1
+Stuck in traffic jam,1
+Power cut in my area,1
+Felt a bit unwell,1
+Laptop didn’t start,1
+Internet issues,1
+Dog was sick,1
+Doctor’s appointment,1
+Meeting ran late,1
+Helping a friend in need,1
+Had to pick up kids,1
+Client meeting overran,1
+Medical check-up,1
+Bank work took longer,1
+Had a flat tire,1
+Home flooded due to rain,1
+Had to take care of grandma,1
+Bus broke down,1
+Unexpected work call,1
+Attending a wedding,1
+Visa appointment,1
+Accompanying a sick neighbor,1
+Family member tested positive,1
+Had a dentist appointment,1
+Power outage during meeting,1
+Had to renew license,1
+Fever in the morning,1
+Child fell sick,1
+Emergency hospital visit,1
+Had to attend funeral,1
+Network was down in the area,1
+Laptop crashed mid-work,1
+Phone got stolen,1
+Lost access to email,1
+Had to go to court,1
+Train got cancelled,1
+Got locked out of home,1
+Internet cable was damaged,1
+Water tank burst at home,1
+Had to move house,1
+Car broke down on way,1
+Heavy rain blocked road,1
+Family member hospitalized,1
+Generator failed,1
+System update took too long,1
+Needed mental health break,1
+Missed bus and got stranded,1
+Laptop charger failed,1
+Had to collect medicine,1
+Unexpected bank appointment,1
+Blood donation drive,1
+Plumber emergency,1
+Gas leak repair,1
+Traveling to native place,1
+Had court hearing,1
+Mobile network outage,1
+Sibling's exam support,1
+Attending parent-teacher meeting,1
+Accident on the way,1
+Needed to reset router,1
+Had unexpected house guests,1
+Took cousin to airport,1
+Blocked road near home,1
