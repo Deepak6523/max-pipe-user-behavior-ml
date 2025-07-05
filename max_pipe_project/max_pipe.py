@@ -36,10 +36,13 @@ def detect_patterns(log_df):
     summary = {}
     for user in log_df['user_id'].unique():
         user_logs = log_df[log_df['user_id'] == user]
-        skipped = user_logs[user_logs['status'] == 'missed']
+        skipped = user_logs[user_logs['status'].str.strip().str.lower() == 'missed']
         if not skipped.empty:
-            summary[user] = f"{len(skipped)} missed tasks. Suggest rescheduling mornings." \
-                if any("am" in t for t in skipped['time'].str.lower()) else "Irregular performance."
+            # Suggest rescheduling if most missed tasks are before 12:00
+            if any(t.strip() < "12:00" for t in skipped['time']):
+                summary[user] = f"{len(skipped)} missed tasks. Suggest rescheduling mornings."
+            else:
+                summary[user] = f"{len(skipped)} missed tasks. Irregular performance."
     return summary
 
 # Phase 4: Sentiment scoring of feedback
@@ -54,19 +57,16 @@ def score_feedback_batch(feedback_df):
 
 # Master pipeline
 def run_pipeline():
-    # Phase 1 & 2: Classification
     print("\n>>> Loading labeled reasons...")
     reasons_df = pd.read_csv("data/processed/labeled_reasons.csv")
     clf, vectorizer = train_classifier(reasons_df)
 
-    # Phase 3: Behavior tracking
     print("\n>>> Analyzing task logs...")
-    logs_df = pd.read_csv("data/processed/user_logs.csv")
+    logs_df = pd.read_csv("data/processed/user_logs.csv", names=["user_id", "time", "status"])
     behavior_summary = detect_patterns(logs_df)
     print("\n--- Behavior Summary ---")
     print(json.dumps(behavior_summary, indent=2))
 
-    # Phase 4: Feedback scoring
     print("\n>>> Scoring user feedback...")
     feedback_df = pd.read_csv("data/raw/feedback.csv")
     scored = score_feedback_batch(feedback_df)
